@@ -1,7 +1,7 @@
 {
-  "name": "PDA",
+  "name": "@zlst/pda",
   "version": "1.0.0",
-  "description": "这是一个Cordova的一个PAD-Andoird插件",
+  "description": "这是一个Cordova的一个PAD-Android插件",
   "cordova": {
     "id": "PDA",
     "platforms": [
