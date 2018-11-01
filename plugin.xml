@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+           id="com.zlst.pda"
+      version="1.0.0">
+    <name>PDA</name>
+    <description>Sample PhoneGap PDA Plugin</description>
+    <license>MIT</license>
+    <keywords>phonegap,PDA</keywords>
+
+
+    <js-module src="www/pda.js" name="PDA">
+        <clobbers target="plus.scanner_gun" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="PDA">
+                <param name="android-package" value="com.zlst.pda.PDA"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/PDA.java" target-dir="src/com/zlst/pda" />
+        <source-file src="src/libs/mediatek-android.jar" target-dir="app/libs"/>
+        <source-file src="src/libs/mediatek-compatibility.jar" target-dir="app/libs"/>        
+     </platform>          
+</plugin>

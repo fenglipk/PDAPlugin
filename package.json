@@ -1,0 +1,17 @@
+{
+  "name": "PDA",
+  "version": "1.0.0",
+  "description": "这是一个Cordova的一个PAD-Andoird插件",
+  "cordova": {
+    "id": "PDA",
+    "platforms": [
+      "android"
+    ]
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "fl",
+  "license": "ISC"
+}
