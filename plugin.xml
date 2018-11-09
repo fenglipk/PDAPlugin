@@ -10,11 +10,13 @@
 
 
     <js-module src="www/pda.js" name="PDA">
+		<!-- 在此可以自定义名称比如plus.scanner_gun，js可以通过plus.scanner_gun调用到www/pda.js里面的方法，www/pda.js里面的PDA通过res/xml/config.xml映射到java的com.zlst.pda.PDA里面的方法 -->
         <clobbers target="plus.scanner_gun" />
     </js-module>
 
     <!-- android -->
     <platform name="android">
+		<!-- 会生成到android工程的res/xml/config.xml文件是www/pda.js里面PDA映射到com.zlst.pda.PDA的Java文件 -->
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="PDA">
                 <param name="android-package" value="com.zlst.pda.PDA"/>
@@ -22,6 +24,7 @@
         </config-file>
 
         <source-file src="src/android/PDA.java" target-dir="src/com/zlst/pda" />
+		<!-- 注意这个libs是在app的目录下，不然会找不到依赖包 -->
         <source-file src="src/libs/mediatek-android.jar" target-dir="app/libs"/>
         <source-file src="src/libs/mediatek-compatibility.jar" target-dir="app/libs"/>        
      </platform>          
